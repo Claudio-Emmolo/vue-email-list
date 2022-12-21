@@ -17,9 +17,22 @@
 <body>
 
     <div id="app">
-        <ul>
-            <li v-for=" (email,index) in emailList">{{ emailList[index] }}</li>
-        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Email List</h1>
+                </div>
+                <div class="col-12">
+                    <ul v-if=" emailList.length == 10 " >
+                        <li v-for=" (email,index) in emailList">{{ emailList[index] }}</li>
+                    </ul>
+
+                    <ul v-else>
+                        <li>Sto generalndo le e-mail</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div> 
 
     <!-- Script Js -->
